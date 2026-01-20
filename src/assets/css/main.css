@@ -1,4 +1,5 @@
-@import './base.css';
+@import 'base.css';
+@import 'animations.css';
 
 :root {
   --navigation-background: black;
