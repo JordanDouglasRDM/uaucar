@@ -15,10 +15,10 @@ export default {
 
 <template>
   <div class="is-flex is-flex-direction-column" style="min-height: 100vh">
-<!--    <AppNavbar :userName="userAuth.login" />-->
+    <!--    <AppNavbar :userName="userAuth.login" />-->
 
     <div class="is-flex" style="flex: 1; overflow: hidden">
-<!--      <AppSidebar />-->
+      <!--      <AppSidebar />-->
 
       <main class="p-4" style="flex: 1; overflow: auto">
         <!-- Transição suave usando PrimeVue -->
