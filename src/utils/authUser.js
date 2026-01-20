@@ -25,7 +25,7 @@ export function getAuthUser() {
   }
 
   // Aceita { usuario: {...} } ou o próprio objeto do usuário
-  const u = saved?.usuario ?? saved ?? null
+  const u = saved ?? null
 
   // Se não houver, retorna um shape vazio com helpers no-safe-op
   if (!u) {
@@ -38,11 +38,26 @@ export function getAuthUser() {
 function makeUserShape(u) {
   if (!u) {
     return {
-
+      raw: null,
+      id: null,
+      name: null,
+      email: null,
+      tenant_id: null,
+      level: null,
+      isLogged: false,
+      initials: 'US',
     }
   }
 
   return {
+    raw: u,
+    id: u.id ?? null,
+    name: u.name ?? '',
+    email: u.email ?? '',
+    tenant_id: u.tenant_id ?? '',
+    level: u.level ?? '',
+    isLogged: true,
+    initials: getUserInitials(u.name ?? u.email ?? ''),
   }
 }
 

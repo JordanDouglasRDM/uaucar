@@ -1,5 +1,5 @@
 import 'bulma/css/bulma.min.css'
-import './assets/main.css'
+import './assets/css/main.css'
 import 'primeicons/primeicons.css'
 
 import { createApp } from 'vue'
