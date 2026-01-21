@@ -48,15 +48,15 @@ const router = createRouter({
       name: 'home',
       meta: {
         requiresAuth: true,
-        title: 'Dashboard',
       },
-      component: () => import('../views/DashboardView.vue'),
+      component: () => import('../views/HomeView.vue'),
       children: [
-        // {
-        //   path: '',
-        //   name: 'loren',
-        // component: () => import('../views/LorenView.vue'),
-        // },
+        {
+          path: '',
+          name: 'dashboard',
+          title: 'Dashboard',
+          component: () => import('../views/DashboardView.vue'),
+        },
       ],
     },
   ],

@@ -1,24 +1,20 @@
 <script>
 import FadeTransition from '@/components/FadeTransition.vue'
-import { getAuthUser } from '@/utils/authUser.js'
+import AppNavbar from '@/components/AppNavbar.vue'
+import AppSidebar from '@/components/AppSidebar.vue'
 
 export default {
   name: 'HomeView',
-  components: { FadeTransition },
-  data() {
-    return {
-      userAuth: getAuthUser(),
-    }
-  },
+  components: { AppSidebar, AppNavbar, FadeTransition },
 }
 </script>
 
 <template>
   <div class="is-flex is-flex-direction-column" style="min-height: 100vh">
-    <!--    <AppNavbar :userName="userAuth.login" />-->
+    <AppNavbar />
 
     <div class="is-flex" style="flex: 1; overflow: hidden">
-      <!--      <AppSidebar />-->
+      <AppSidebar />
 
       <main class="p-4" style="flex: 1; overflow: auto">
         <!-- Transição suave usando PrimeVue -->
