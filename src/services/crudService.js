@@ -33,37 +33,25 @@ const crudService = {
   },
 
   store: async (route, data) => {
-    try {
-      const response = await apiServer.post(route, data)
-      return {
-        data: response.data.data,
-        message: response.data.message,
-      }
-    } catch (error) {
-      throw error
+    const response = await apiServer.post(route, data)
+    return {
+      data: response.data.data,
+      message: response.data.message,
     }
   },
   update: async (route, id, data) => {
-    try {
-      const response = await apiServer.put(`${route}/${id}`, data)
-      return {
-        data: response.data.data,
-        message: response.data.message,
-      }
-    } catch (error) {
-      throw error
+    const response = await apiServer.put(`${route}/${id}`, data)
+    return {
+      data: response.data.data,
+      message: response.data.message,
     }
   },
 
   updatePost: async (route, id, data) => {
-    try {
-      const response = await apiServer.post(`${route}/${id}`, data)
-      return {
-        data: response.data.data,
-        message: response.data.message,
-      }
-    } catch (error) {
-      throw error
+    const response = await apiServer.post(`${route}/${id}`, data)
+    return {
+      data: response.data.data,
+      message: response.data.message,
     }
   },
 }

@@ -55,4 +55,4 @@ export function currencyToNumber(currencyString) {
         currencyString.replace("R$", "").trim().replace(/\./g, "").replace(",", ".")
     );
     return isNaN(number) ? null : number;
-};
+}
