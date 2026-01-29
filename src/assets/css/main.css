@@ -18,3 +18,36 @@
 .p-select-option.p-focus {
   background-color: var(--p-slate-200) !important;
 }
+
+.status--active, .status__completed {
+  background-color: var(--good-background);
+  color: var(--good-text);
+  padding: 2px 4px ;
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+}
+.status--inactive, .status__canceled, .status__refused {
+  background-color: var(--bad-background);
+  color: var(--bad-text);
+  padding: 2px 4px ;
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+}
+.status__in_progress, .status__pending {
+  background-color: var(--neutral-background);
+  color: var(--neutral-text);
+  padding: 2px 4px ;
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+}
+.status__approved {
+  background-color: var(--approved-background);
+  color: var(--approved-text);
+  padding: 2px 4px ;
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+}
